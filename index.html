@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Честит Рожден Ден, Алекс!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: linear-gradient(135deg, #fadb98 0%, #fb7c04 100%);
+      font-family: 'Roboto Mono', 'Arial Black', Arial, sans-serif;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+    .confetti {
+      position: fixed;
+      pointer-events: none;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      z-index: 10;
+    }
+    .bb-card {
+      background: rgba(34,34,34,0.97);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.23);
+      padding: 32px 18px;
+      max-width: 420px;
+      width: 95vw;
+      margin: 24px auto;
+      text-align: center;
+      border: 4px solid #fb7c04;
+      color: #fadb98;
+      position: relative;
+      animation: popin 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
+    }
+    @keyframes popin {
+      0% { transform: scale(0.7) translateY(80px); opacity: 0;}
+      70% { transform: scale(1.07) translateY(-8px);}
+      100% { transform: scale(1) translateY(0); opacity: 1;}
+    }
+    .bb-title {
+      font-size: 2.1em;
+      margin-bottom: 0.3em;
+      color: #fb7c04;
+      letter-spacing: 2px;
+      font-family: 'Roboto Mono', 'Arial Black', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2em;
+      flex-wrap: wrap;
+    }
+    .bb-square {
+      display: inline-block;
+      background: #5a8e9a;
+      color: #fff;
+      border-radius: 6px;
+      padding: 0.1em 0.35em;
+      font-size: 1.1em;
+      margin: 0 0.07em;
+      box-shadow: 0 2px 8px rgba(90,142,154,0.13);
+      font-family: inherit;
+      animation: squarepop 1s cubic-bezier(.68,-0.55,.27,1.55) both;
+    }
+    @keyframes squarepop {
+      0% { transform: scale(0.2) rotate(-30deg); opacity: 0;}
+      60% { transform: scale(1.15) rotate(12deg);}
+      100% { transform: scale(1) rotate(0); opacity: 1;}
+    }
+    .bb-chem {
+      font-size: 1.2em;
+      color: #7f5c13;
+      margin-bottom: 0.5em;
+      animation: fadein 1.2s 0.5s both;
+    }
+    @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .bb-cta {
+      color: #fb7c04;
+      font-size: 1.25em;
+      margin: 1.2em 0 0.7em 0;
+      font-weight: bold;
+      animation: fadein 1.2s 1s both;
+    }
+    .bb-smoke {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.4em;
+      height: 2.5em;
+      align-items: flex-end;
+    }
+    .smoke {
+      font-size: 2em;
+      color: #b788c1;
+      opacity: 0.85;
+      animation: smokeup 2.5s infinite ease-in-out;
+      display: inline-block;
+      margin: 0 0.2em;
+      filter: blur(0.5px);
+    }
+    .smoke2 { animation-delay: 0.7s;}
+    .smoke3 { animation-delay: 1.3s;}
+    @keyframes smokeup {
+      0% { transform: translateY(0) scale(1);}
+      40% { opacity: 1;}
+      80% { transform: translateY(-16px) scale(1.15);}
+      100% { opacity: 0; transform: translateY(-32px) scale(1.2);}
+    }
+    .cake-emoji {
+      font-size: 2.3em;
+      display: inline-block;
+      animation: cakebounce 1.6s infinite cubic-bezier(.68,-0.55,.27,1.55);
+      margin-bottom: 0.1em;
+      margin-top: 0.2em;
+    }
+    @keyframes cakebounce {
+      0%, 100% { transform: translateY(0);}
+      20% { transform: translateY(-10px);}
+      40% { transform: translateY(2px);}
+      60% { transform: translateY(-5px);}
+      80% { transform: translateY(1px);}
+    }
+    a.steam-link {
+      display: inline-block;
+      background: #5a8e9a;
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-top: 1.1em;
+      box-shadow: 0 3px 12px rgba(23,26,33,0.13);
+      transition: background 0.2s, transform 0.2s;
+      animation: fadein 1.3s 1.2s both;
+    }
+    a.steam-link:active {
+      background: #fb7c04;
+      color: #222;
+      transform: scale(0.96);
+    }
+    .bb-footer {
+      margin-top: 2em;
+      font-size: 0.95em;
+      color: #552b42;
+      opacity: 0.7;
+      animation: fadein 1.2s 1.5s both;
+    }
+    @media (max-width: 480px) {
+      .bb-card { padding: 18px 4vw; }
+      .bb-title { font-size: 1.3em; }
+      .cake-emoji { font-size: 1.5em; }
+    }
+  </style>
+</head>
+<body>
+  <canvas class="confetti"></canvas>
+  <div class="bb-card">
+    <div class="bb-smoke">
+      <span class="smoke">💨</span>
+      <span class="smoke smoke2">💨</span>
+      <span class="smoke smoke3">💨</span>
+    </div>
+    <div class="cake-emoji">🎂</div>
+    <div class="bb-title">
+      <span class="bb-square">Br</span> <span>Честит</span>
+      <span class="bb-square">Ba</span> <span>Рожден Ден, Алекс!</span>
+    </div>
+    <div class="bb-chem">[ C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 🎉 ]</div>
+    <p>
+      Алекс, пожелавам ти здраве, смелост и много приключения!<br>
+      Нека винаги следваш мечтите си и никога да не забравяш колко си специален.<br>
+      Животът е като химията – най-добрите реакции се случват с правилните хора!
+    </p>
+    <div class="bb-cta">Провери своя Steam акаунт – там те чака специален подарък!</div>
+    <a class="steam-link" href="https://store.steampowered.com/" target="_blank">Виж изненадата</a>
+    <div class="bb-footer">Say my name... <strong>Алекс</strong>!<br>💚 От приятел, който цени всяка минута с теб.</div>
+  </div>
+  <script>
+    // Confetti animation (lightweight)
+    const canvas = document.querySelector('.confetti');
+    const ctx = canvas.getContext('2d');
+    let W = window.innerWidth, H = window.innerHeight;
+    canvas.width = W; canvas.height = H;
+    let particles = [];
+    const colors = ['#fb7c04','#fff9c4','#5a8e9a','#f06292','#ffd600','#fff'];
+
+    function randomInt(a,b){return Math.floor(Math.random()*(b-a+1))+a;}
+    function Particle(){
+      this.x = randomInt(0,W);
+      this.y = randomInt(-H,0);
+      this.r = randomInt(4,8);
+      this.color = colors[randomInt(0,colors.length-1)];
+      this.d = randomInt(2,6);
+      this.tilt = randomInt(-10,10);
+      this.tiltAngle = 0;
+      this.tiltAngleInc = Math.random()*0.07+0.05;
+    }
+    for(let i=0;i<60;i++) particles.push(new Particle());
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+      for(let i=0;i<particles.length;i++){
+        let p = particles[i];
+        ctx.beginPath();
+        ctx.ellipse(p.x,p.y,p.r,p.r/2,Math.PI/4,0,2*Math.PI);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+      }
+      update();
+      requestAnimationFrame(draw);
+    }
+    function update(){
+      for(let i=0;i<particles.length;i++){
+        let p = particles[i];
+        p.y += p.d;
+        p.tiltAngle += p.tiltAngleInc;
+        p.x += Math.sin(p.tiltAngle)*2;
+        if(p.y > H+20){
+          particles[i] = new Particle();
+          particles[i].y = -10;
+        }
+      }
+    }
+    window.addEventListener('resize',()=>{
+      W = window.innerWidth; H = window.innerHeight;
+      canvas.width = W; canvas.height = H;
+    });
+    draw();
+  </script>
+</body>
+</html>
